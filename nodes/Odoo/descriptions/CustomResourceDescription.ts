@@ -4,7 +4,7 @@ import {
 
 export const customResourceOperations: INodeProperties[] = [
 	{
-		displayName: 'Custom Resource',
+		displayName: 'Resource',
 		name: 'customResource',
 		type: 'options',
 		default: '',
@@ -120,7 +120,7 @@ export const customResourceDescription: INodeProperties[] = [
 	/*                                custom:get                                  */
 	/* -------------------------------------------------------------------------- */
 	{
-		displayName: 'Custom Resource ID',
+		displayName: 'ID',
 		name: 'customResourceId',
 		type: 'string',
 		default: '',
@@ -316,7 +316,7 @@ export const customResourceDescription: INodeProperties[] = [
 	/*                                custom:update                               */
 	/* -------------------------------------------------------------------------- */
 	{
-		displayName: 'Custom Resource ID',
+		displayName: 'ID',
 		name: 'customResourceId',
 		type: 'string',
 		default: '',
@@ -382,7 +382,7 @@ export const customResourceDescription: INodeProperties[] = [
 	/*                                custom:workflow                             */
 	/* -------------------------------------------------------------------------- */
 	{
-		displayName: 'Custom Resource ID',
+		displayName: 'ID',
 		name: 'customResourceId',
 		type: 'string',
 		default: '',

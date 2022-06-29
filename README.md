@@ -35,4 +35,8 @@ n8n
 Plesk or C-Panel:
 ```
 node /var/www/vhosts/n8n/bin/n8n
-```
+
+````````````
+Navigate to n8n_install folder and start n8n from terminal:
+
+npx n8n

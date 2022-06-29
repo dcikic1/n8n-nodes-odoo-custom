@@ -68,37 +68,22 @@ export class Odoo implements INodeType {
 				displayName: 'Resource',
 				name: 'resource',
 				type: 'options',
-				default: 'contact',
+				default: 'custom',
 				noDataExpression: true,
 				options: [
+				
 					{
-						name: 'Contact',
-						value: 'contact',
-					},
-					{
-						name: 'Custom Resource',
+						name: 'Resource',
 						value: 'custom',
 					},
-					{
-						name: 'Note',
-						value: 'note',
-					},
-					{
-						name: 'Opportunity',
-						value: 'opportunity',
-					},
+				
 				],
 				description: 'The resource to operate on',
 			},
 
 			...customResourceOperations,
 			...customResourceDescription,
-			...opportunityOperations,
-			...opportunityDescription,
-			...contactOperations,
-			...contactDescription,
-			...noteOperations,
-			...noteDescription,
+			
 		],
 	};
 
