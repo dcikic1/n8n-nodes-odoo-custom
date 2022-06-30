@@ -1,16 +1,16 @@
 {
-    "name": "@digital-boss/n8n-nodes-odoo",
-    "version": "0.2.3",
+    "name": "@digital-boss/n8n-nodes-odoo-custom",
+    "version": "0.1.0",
     "description": "A node consuming the Odoo API.",
     "license": "SEE LICENSE IN LICENSE.md",
     "homepage": "https://n8n.io",
     "author": {
-        "name": "Steffen Hannesschlaeger",
-        "email": "steffen_hannesschlaeger@hotmail.de"
+        "name": "Dino Cikic",
+        "email": "dinocikic@gmail.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/digital-boss/n8n-nodes-odoo"
+        "url": "https://github.com/digital-boss/n8n-nodes-odoo-custom"
     },
     "keywords": [
         "n8n",
@@ -27,11 +27,16 @@
     "main": "index.js",
     "scripts": {
         "dev": "npm run watch",
-        "build": "tsc && gulp",
-        "tslint": "tslint -p tsconfig.json -c tslint.json",
+        "build": "genversion -s -e nodes/version.ts && git add . && tsc && gulp",
+        "lint": "tslint -p tsconfig.json -c tslint.json",
+        "lintfix": "tslint --fix -p tsconfig.json -c tslint.json",
+        "nodelinter": "nodelinter",
         "watch": "tsc --watch",
-        "test": "jest"
-    },
+        "test": "jest",
+        "release": "npm run build && npm publish --access=public",
+        "version": "npm run build",
+        "postversion": "git push"
+      },
     "files": [
         "dist"
     ],
@@ -48,6 +53,7 @@
         "@types/jest": "^26.0.13",
         "@types/node": "14.17.27",
         "@types/request-promise-native": "~1.0.15",
+        "genversion": "^3.1.1",
         "gulp": "^4.0.0",
         "jest": "^26.4.2",
         "n8n-workflow": "~0.87.0",
